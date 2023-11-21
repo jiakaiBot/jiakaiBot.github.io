@@ -81,12 +81,14 @@ a.heading-link{color:inherit;text-decoration:none;}
     <div id="content">
 <div class="markdown-body" id="postBody">
 <p>hello world. hello issue blog.</p>
-
 </div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
 </div>
-    <div id="footer">Copyright © <span id="year"></span> <a href="https://issue.gujiakai.top"> Jiakai's Issue Blog </a><p>  <span id="runday"></span>Powered by <a href="https://github.com/Meekdai/Gmeek" target="_blank">Gmeek</a></p>
+    <div id="footer">Copyright © <span id="year"></span><a href="https://issue.gujiakai.top"> Jiakai's Issue Blog </a>
+<p>
+<span id="runday"></span>Powered by <a href="https://github.com/Meekdai/Gmeek" target="_blank">Gmeek</a>
+</p>
 
 <script>
 if("10/25/2023"!=""){
@@ -135,7 +137,11 @@ console.log("\n %c Gmeek main %c https://github.com/Meekdai/Gmeek \n\n", "color:
 
 <script>
 
-
+cmButton=document.getElementById("cmButton");
+    span=document.createElement("span");
+    span.setAttribute("class","Counter");
+    span.innerHTML="1";
+    cmButton.appendChild(span);
 
 function openComments(){
     cm=document.getElementById("comments");
